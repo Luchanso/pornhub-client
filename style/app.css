@@ -1,0 +1,25 @@
+body {
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  color: #333333;
+}
+
+hr {
+  border-top: 1px solid #ccc;
+}
+
+small {
+  color: #c8c8c8;
+}
+
+.log {
+  color: #aaaaaa;
+  font-size: 11px;
+}
+
+.log p {
+  margin: 0px;
+}
+
+.container {
+  margin-bottom: 25px;
+}
