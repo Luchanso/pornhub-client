@@ -1,11 +1,11 @@
-var tor = global.tor;
+let tor = global.tor;
 
 tor.events.on('progress', updateProgress.bind(this));
 tor.events.on('message', writeInLog.bind(this));
 
 function rederictOnPornHub() {
   const delay = 3;
-  var timer = {
+  let timer = {
     tick: 0
   };
 
@@ -39,18 +39,18 @@ function updateProgress(value) {
  * @param  {String} message Your message
  */
 function writeInLog(message) {
-  var paragraph = document.createElement('p');
-  var newLine = document.createElement('br');
-  var node = document.createTextNode('[' + new Date().toLocaleTimeString() + '] ' + message);
+  let paragraph = document.createElement('p');
+  let newLine = document.createElement('br');
+  let node = document.createTextNode('[' + new Date().toLocaleTimeString() + '] ' + message);
 
   paragraph.appendChild(node);
   paragraph.appendChild(newLine);
 
-  var log = document.getElementsByClassName('log')[0];
+  let log = document.getElementsByClassName('log')[0];
   log.appendChild(paragraph);
 }
 
-var progressbar = new ProgressBar.Circle('.container', {
+let progressbar = new ProgressBar.Circle('.container', {
   strokeWidth: 2,
   color: '#FF9900',
   svgStyle: {

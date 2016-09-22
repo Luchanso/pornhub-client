@@ -2,7 +2,7 @@ const spawn = require('child_process').spawn;
 const bin = spawn('tor/tor/tor.exe');
 const EventEmitter = require('events');
 
-var tor = {
+let tor = {
   bin: bin,
   events: new EventEmitter(),
 };
@@ -10,16 +10,16 @@ var tor = {
 bin.stdout.on('data', (data) => {
   console.log(data.toString());
 
-  var str = data.toString();
-  var progress = chainParser(str);
+  let str = data.toString();
+  let progress = chainParser(str);
 
   tor.events.emit('message', str);
   tor.events.emit('progress', progress);
 });
 
 function chainParser(string) {
-  var progress = 0;
-  var bootstraped = getBootstraped(string);
+  let progress = 0;
+  let bootstraped = getBootstraped(string);
 
   if (typeof bootstraped === 'number') {
     progress = bootstraped;
@@ -31,15 +31,15 @@ function chainParser(string) {
 function getBootstraped(string) {
   const firstPath = 'Bootstrapped ';
 
-  var startSymbol = string.indexOf(firstPath) + firstPath.length;
-  var endSymbol = string.indexOf('%');
+  let startSymbol = string.indexOf(firstPath) + firstPath.length;
+  let endSymbol = string.indexOf('%');
 
 
   if (startSymbol - firstPath.length === -1) {
     return null;
   }
 
-  var numberStr = string.substring(startSymbol, endSymbol);
+  let numberStr = string.substring(startSymbol, endSymbol);
 
   return Number.parseInt(numberStr) / 100;
 }
