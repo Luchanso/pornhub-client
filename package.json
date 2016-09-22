@@ -1,0 +1,32 @@
+{
+  "name": "ph-client",
+  "version": "0.1.0",
+  "description": "Porno hub client for windows",
+  "user-agent": "PornoHub Client 0.1.0",
+  "main": "index.html",
+  "node-main": "src/app.js",
+  "window": {
+    "width": 1024,
+    "height": 640,
+    "position": "center"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Luchanso/pornohub-client.git"
+  },
+  "keywords": [
+    "porn",
+    "russia",
+    "fap",
+    "fap"
+  ],
+  "author": "Loutchansky Oleg",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Luchanso/pornohub-client/issues"
+  },
+  "homepage": "https://github.com/Luchanso/pornohub-client#readme"
+}
