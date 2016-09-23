@@ -1,8 +1,8 @@
 {
   "name": "ph-client",
   "version": "0.1.0",
-  "description": "Porno hub client for windows",
-  "user-agent": "PornoHub Client 0.1.0",
+  "description": "Porn hub client for windows",
+  "user-agent": "PornHub Client 0.1.0",
   "main": "index.html",
   "node-main": "src/app.js",
   "window": {
@@ -19,8 +19,11 @@
     "url": "git+https://github.com/Luchanso/pornohub-client.git"
   },
   "keywords": [
-    "porn",
-    "russia",
+    "pornhub",
+    "webkit",
+    "node",
+    "client",
+    "anonymusly",
     "fap",
     "fap"
   ],
