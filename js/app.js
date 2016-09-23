@@ -4,7 +4,7 @@ tor.events.on('progress', updateProgress.bind(this));
 tor.events.on('message', writeInLog.bind(this));
 
 function rederictOnPornHub() {
-  const delay = 3;
+  const delay = 1;
   let timer = {
     tick: 0
   };
