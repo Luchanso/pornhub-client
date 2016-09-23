@@ -28,5 +28,8 @@
   "bugs": {
     "url": "https://github.com/Luchanso/pornohub-client/issues"
   },
-  "homepage": "https://github.com/Luchanso/pornohub-client#readme"
+  "homepage": "https://github.com/Luchanso/pornohub-client#readme",
+  "devDependencies": {
+    "nw-builder": "^3.1.0"
+  }
 }
