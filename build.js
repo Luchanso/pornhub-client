@@ -12,7 +12,7 @@ var nw = new NwBuilder({
     platforms: ['win32'],
     flavor: 'sdk',
     appName: 'ph-client',
-    appVersion: '0.1.0',
+    appVersion: '0.1.1',
     buildDir: './build',
     zip: true
 });

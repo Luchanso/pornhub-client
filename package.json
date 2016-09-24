@@ -1,6 +1,6 @@
 {
   "name": "ph-client",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Porno hub client for windows",
   "user-agent": "PornoHub Client 0.1.0",
   "main": "index.html",
