@@ -8,6 +8,7 @@ It's a chromium native client with [TOR proxy](https://www.torproject.org/), for
 Planned to add:
 * Hotkey for hide
 * Master password
+* Portable version
 * "Without cookie" mode (for complete anonymity)
 * Switcher for direct connection
 
