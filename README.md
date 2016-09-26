@@ -3,7 +3,7 @@
 Download [here](https://github.com/Luchanso/pornhub-client/releases). Latest version: 0.1.1
 ![screen](https://cloud.githubusercontent.com/assets/2098777/18834361/1ed653fc-83fe-11e6-95d1-a210de686ec3.png)
 
-It's a chromium native client with [TOR proxy](https://www.torproject.org/), for anonymously (for your provider) watching pornhub and other friendly resources. You can via ph-client sign in and sing up, and your account will be save in cookie. If you sign out, then autorization cookie will be cleard.
+It's a chromium native client with [TOR proxy](https://www.torproject.org/), for anonymously (for your provider) watching pornhub and other friendly resources. You can via ph-client sign in and sing up, and your account will be save in cookie. If you sign out, then autorization cookie will be cleard. **This project without telemetry!**
 
 Planned to add:
 * Hotkey for hide
