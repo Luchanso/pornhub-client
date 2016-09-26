@@ -8,8 +8,6 @@ let tor = {
 };
 
 bin.stdout.on('data', (data) => {
-  console.log(data.toString());
-
   let str = data.toString();
   let progress = chainParser(str);
 
