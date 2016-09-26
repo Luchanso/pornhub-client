@@ -9,6 +9,7 @@ Planned to add:
 * Hotkey for hide
 * Master password
 * "Without cookie" mode (for complete anonymity)
+* Switcher for direct connection
 
 More screenshots:
 ![Loading...](https://cloud.githubusercontent.com/assets/2098777/18818028/2e434d2c-8377-11e6-9bac-4b0a1d85d8d2.png)
