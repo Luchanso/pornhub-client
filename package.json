@@ -28,6 +28,8 @@
   "homepage": "https://github.com/Luchanso/pornhub-client#readme",
   "devDependencies": {
     "asar": "^0.12.3",
-    "electron": "^1.4.1"
+    "async": "^2.0.1",
+    "electron": "^1.4.1",
+    "electron-builder": "^7.9.0"
   }
 }
