@@ -1,0 +1,33 @@
+{
+  "name": "ph-client",
+  "version": "1.0.0",
+  "description": "Porn hub client",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Luchanso/pornhub-client.git"
+  },
+  "keywords": [
+    "pornhub",
+    "node",
+    "client",
+    "anonymusly",
+    "fap fap",
+    "porn",
+    "TOR",
+    "electron"
+  ],
+  "author": "Loutchansky Oleg",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Luchanso/pornhub-client/issues"
+  },
+  "homepage": "https://github.com/Luchanso/pornhub-client#readme",
+  "devDependencies": {
+    "asar": "^0.12.3",
+    "electron": "^1.4.1"
+  }
+}
