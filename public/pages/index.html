@@ -1,13 +1,38 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="UTF-8">
-    <title>Hello World!</title>
-  </head>
-  <body>
-    <h1>Hello World!</h1>
-    We are using node <script>document.write(process.versions.node)</script>,
-    Chrome <script>document.write(process.versions.chrome)</script>,
-    and Electron <script>document.write(process.versions.electron)</script>.
-  </body>
+    <title>Client</title>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="../css/materialize.min.css" media="screen,projection">
+    <link type="text/css" rel="stylesheet" href="../css/index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div class="container main">
+        <h1 class="header-text"> Client <small>beta</small></h1>
+        <p class="loading-label">
+          loading...
+        </p>
+        <div class="progress orange lighten-5">
+            <div class="determinate orange" id="progress-bar" style="width: 0%"></div>
+        </div>
+
+        <a class="btn-large orange disabled" id="run">Run</a>
+        <a class="waves-effect waves-light btn-large orange">Set password</a>
+
+        <!-- <div class="row">
+        <div class="col sl">
+
+        </div>
+      </div> -->
+    </div>
+    <script type="text/javascript" src="../js/clear.js"></script>
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/materialize.min.js"></script>
+    <script type="text/javascript" src="../js/index.js"></script>
+</body>
+
 </html>
