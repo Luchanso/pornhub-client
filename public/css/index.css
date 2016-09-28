@@ -1,0 +1,16 @@
+body {
+  background-color: black;
+  color: white;
+}
+
+.main {
+  text-align: center;
+}
+
+.header-text {
+  font-weight: 100;
+}
+
+.header-text small {
+  color: #ccc;
+}
