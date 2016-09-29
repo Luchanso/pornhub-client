@@ -1,5 +1,3 @@
-console.log('Electron Run');
-
 const {app, BrowserWindow, ipcMain} = require('electron')
 const async = require('async')
 const tor = require('./tor')
