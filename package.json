@@ -1,10 +1,16 @@
 {
   "name": "ph-client",
   "version": "1.0.0",
-  "description": "Porn hub client",
+  "description": "client",
   "main": "src/app.js",
   "scripts": {
+    "pack": "build --dir",
+    "dist": "build",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "build": {
+    "appId": "test.test",
+    "category": "test.test.test.test"
   },
   "repository": {
     "type": "git",
@@ -26,13 +32,13 @@
     "url": "https://github.com/Luchanso/pornhub-client/issues"
   },
   "homepage": "https://github.com/Luchanso/pornhub-client#readme",
-  "devDependencies": {
+  "dependencies": {
     "asar": "^0.12.3",
     "async": "^2.0.1",
-    "electron": "^1.4.1",
-    "electron-builder": "^7.9.0"
-  },
-  "dependencies": {
     "electron-json-storage": "^2.0.0"
+  },
+  "devDependencies": {
+    "electron-builder": "^7.9.0",
+    "electron": "^1.4.1"
   }
 }
