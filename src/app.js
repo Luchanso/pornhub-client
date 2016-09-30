@@ -1,85 +1,58 @@
-const {app, BrowserWindow, ipcMain} = require('electron')
-const async = require('async')
 const tor = require('./tor')
-const storage = require('electron-json-storage')
-const pages = `file://${__dirname}/../public/pages/`
+const async = require('async')
 
-let win
+global.tor = tor
 
-tor.events.on('ready', () => {
-  createProxy()
-})
+let gui
+let hotkeys = []
 
-ipcMain.on('password', setPassword)
+function main(next) {
+  gui = window.require('nw.gui')
 
-function setPassword(event, password) {
-  storage.set('password', {pass: password});
+  if (next) next()
 }
 
-function createWindow(next) {
-  win = new BrowserWindow({
-    width: 800,
-    height: 600
-  })
-  win.setMenu(null);
+function runProxy(next) {
+  tor.start();
 
-  next();
+  if (next) next()
 }
 
-function runApp(isLocked, next) {
-  let page = 'index.html'
+function connectToProxy(next) {
+  const App = gui.App
 
-  if (isLocked) page = 'password-page.html'
+  const proxyConfig = 'socks4://127.0.0.1:9050'
 
-  win.loadURL(pages + page)
-  win.webContents.openDevTools()
-  win.on('closed', () => {
-    win = null
-  })
+  App.setProxyConfig(proxyConfig)
+
+  if (next) next()
+}
+
+function bindHotkeys(next) {
+  createKey('Escape', pressEscape)
 
   next()
 }
 
-function createProxy(next = null) {
-  const proxyConfig = {
-    proxyRules: 'socks4://127.0.0.1:9050'
-  }
-  const ses = win.webContents.session
-  ses.setProxy(proxyConfig, () => {
-    if (next) next()
-  })
+function pressEscape() {
+  gui.App.closeAllWindows()
 }
 
-function initTor(next) {
-  global.tor = tor;
+function createKey(keyName, callback) {
+  const key = new gui.Shortcut({key: keyName})
+  gui.App.registerGlobalHotKey(key)
+  key.on('active', callback)
 
-  if (tor.isReady) return next()
-
-  tor.start(next)
+  hotkeys.push(key)
 }
 
-function checkPassword(next) {
-  storage.has('password', next)
-}
-
-function appIsReady() {
-  initTor();
-
+setTimeout(() => {
   async.waterfall([
-    createWindow,
-    checkPassword,
-    runApp
-  ], (err) => {
-    if (err) {
-      throw err
-    }
+    runProxy,
+    main,
+    bindHotkeys,
+    connectToProxy
+  ], (err, res) => {
+    if (err) throw err
   })
-}
-
-app.on('ready', appIsReady)
-
-app.on('window-all-closed', () => {
-  if (process.platform !== 'darwin') {
-    app.quit()
-  }
-})
+}, 1000);
