@@ -1,4 +1,4 @@
-const tor = window.nodeRequire('electron').remote.getGlobal('tor')
+const tor = global.tor
 
 if (tor.isReady) {
   ready()
@@ -29,5 +29,5 @@ function ready() {
 }
 
 function rederict() {
-  window.location = 'http://pornhub.com/'
+  window.location = 'http://2ip.ru/'
 }
