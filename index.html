@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>ph-client</title>
+  </head>
+  <body>
+    <script src="./public/js/data-manager.js" charset="utf-8"></script>
+    <script type="text/javascript">
+      let win = nw.Window.get()
+      win.showDevTools()
+      win.on('closed', () => {
+        DataManager.clearCache()
+      })
+
+      if (DataManager.password) window.location = '../public/pages/password-page.html'
+      else                      window.location = '../public/pages/index.html'
+    </script>
+  </body>
+</html>
