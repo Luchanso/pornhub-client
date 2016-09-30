@@ -1,44 +1,42 @@
 {
   "name": "ph-client",
   "version": "1.0.0",
-  "description": "client",
-  "main": "src/app.js",
-  "scripts": {
-    "pack": "build --dir",
-    "dist": "build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "description": "Porn hub client for windows",
+  "user-agent": "Mozilla/5.0 (Windows NT 10.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.116 Safari/537.36 ph-client/1.0.0",
+  "main": "index.html",
+  "node-main": "src/app.js",
+  "chromium-args": "-user-data-dir='./data/'",
+  "window": {
+    "width": 1024,
+    "height": 640,
+    "position": "center"
   },
-  "build": {
-    "appId": "test.test",
-    "category": "test.test.test.test"
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node build"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Luchanso/pornhub-client.git"
+    "url": "git+https://github.com/Luchanso/pornohub-client.git"
   },
   "keywords": [
     "pornhub",
+    "webkit",
     "node",
     "client",
     "anonymusly",
-    "fap fap",
-    "porn",
-    "TOR",
-    "electron"
+    "hand made"
   ],
   "author": "Loutchansky Oleg",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Luchanso/pornhub-client/issues"
+    "url": "https://github.com/Luchanso/pornohub-client/issues"
   },
-  "homepage": "https://github.com/Luchanso/pornhub-client#readme",
-  "dependencies": {
-    "asar": "^0.12.3",
-    "async": "^2.0.1",
-    "electron-json-storage": "^2.0.0"
-  },
+  "homepage": "https://github.com/Luchanso/pornohub-client#readme",
   "devDependencies": {
-    "electron-builder": "^7.9.0",
-    "electron": "^1.4.1"
+    "nw-builder": "^3.1.0"
+  },
+  "dependencies": {
+    "async": "^2.0.1"
   }
 }
