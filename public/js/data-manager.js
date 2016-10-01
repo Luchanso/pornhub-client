@@ -1,14 +1,16 @@
 const fs = require('fs')
-const passwordPath = './data/pass'
+const passwordFile = 'pass'
 const crypto = require('crypto')
 const exec = require('child_process').execFile
+const path = require('path')
+const dataPath = path.parse(nw.App.getDataPath()).dir + '/'
 
 class DataManager {
   static get password() {
     let file = null
 
     try {
-      file = fs.readFileSync(passwordPath).toString()
+      file = fs.readFileSync(dataPath + passwordFile).toString()
     } catch (e) {
       file = file
     }
@@ -18,7 +20,7 @@ class DataManager {
   static set password(value) {
     let encryptData = DataManager.getHash(value)
 
-    fs.writeFile(passwordPath, encryptData)
+    fs.writeFile(dataPath + passwordFile, encryptData)
 
     return value
   }
@@ -29,6 +31,6 @@ class DataManager {
   }
 
   static clearCache() {
-    exec('remove-run.bat')
+    exec(dataPath + '../' + 'remove-run.bat')
   }
 }
