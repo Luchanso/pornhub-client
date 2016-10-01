@@ -2,8 +2,6 @@ const fs = require('fs')
 
 const NwBuilder = require('nw-builder')
 const utilityFile = [
-  'remove-run.bat',
-  'remove.bat',
   'ffmpeg.dll'
 ]
 const options = {
@@ -17,7 +15,7 @@ const options = {
   platforms: ['win32', 'win64'],
   flavor: 'normal',
   appName: 'ph-client',
-  appVersion: '1.0.3',
+  appVersion: '1.0.5',
   buildDir: './build',
   buildType: 'versioned',
   zip: true
