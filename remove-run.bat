@@ -1,1 +1,2 @@
 START remove.bat
+exit
