@@ -15,9 +15,9 @@ const options = {
     'package.json'
   ],
   platforms: ['win32', 'win64'],
-  flavor: 'sdk', //'normal',
+  flavor: 'normal',
   appName: 'ph-client',
-  appVersion: '1.0.1',
+  appVersion: '1.0.3',
   buildDir: './build',
   buildType: 'versioned',
   zip: true
