@@ -1,8 +1,8 @@
 {
   "name": "ph-client",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "Porn hub client for windows",
-  "user-agent": "Mozilla/5.0 (Windows NT 10.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.116 Safari/537.36 ph-client/1.0.0",
+  "user-agent": "Mozilla/5.0 (Windows NT 10.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.116 Safari/537.36 ph-client/1.0.3",
   "main": "index.html",
   "node-main": "src/app.js",
   "chromium-args": "-user-data-dir='./data/'",
