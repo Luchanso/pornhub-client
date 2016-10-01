@@ -8,9 +8,10 @@
     <script src="./public/js/data-manager.js" charset="utf-8"></script>
     <script type="text/javascript">
       let win = nw.Window.get()
-      win.showDevTools()
-      win.on('closed', () => {
+      // win.showDevTools()
+      win.on('close', () => {
         DataManager.clearCache()
+        win.close(true)
       })
 
       if (DataManager.password) window.location = '../public/pages/password-page.html'
