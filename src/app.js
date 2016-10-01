@@ -1,5 +1,4 @@
 const tor = require('./tor')
-const async = require('async')
 
 global.tor = tor
 
@@ -31,7 +30,7 @@ function connectToProxy(next) {
 function bindHotkeys(next) {
   createKey('Escape', pressEscape)
 
-  next()
+  if (next) next()
 }
 
 function pressEscape() {
@@ -47,12 +46,8 @@ function createKey(keyName, callback) {
 }
 
 setTimeout(() => {
-  async.waterfall([
-    runProxy,
-    main,
-    bindHotkeys,
-    connectToProxy
-  ], (err, res) => {
-    if (err) throw err
-  })
+  runProxy()
+  main()
+  bindHotkeys()
+  connectToProxy()
 }, 1000);
