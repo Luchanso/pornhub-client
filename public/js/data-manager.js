@@ -1,7 +1,6 @@
 const fs = require('fs')
 const passwordFile = 'pass'
 const crypto = require('crypto')
-const exec = require('child_process').execFile
 const path = require('path')
 const dataPath = path.parse(nw.App.getDataPath()).dir + '/'
 
@@ -31,6 +30,23 @@ class DataManager {
   }
 
   static clearCache() {
-    exec(dataPath + '../' + 'remove-run.bat')
+    nw.global.chrome.browsingData.remove({
+      since: 0
+    }, {
+      appcache: true,
+      cache: true,
+      cookies: true,
+      downloads: true,
+      fileSystems: true,
+      formData: true,
+      history: true,
+      indexedDB: true,
+      localStorage: true,
+      pluginData: true,
+      passwords: true,
+      serverBoundCertificates: true,
+      serviceWorkers: true,
+      webSQL: true
+    })
   }
 }
