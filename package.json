@@ -5,7 +5,6 @@
   "user-agent": "Mozilla/5.0 (Windows NT 10.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.116 Safari/537.36 ph-client/1.0.5",
   "main": "index.html",
   "node-main": "src/app.js",
-  "chromium-args": "-user-data-dir='./data/'",
   "window": {
     "width": 1024,
     "height": 640,
@@ -13,7 +12,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "node build"
+    "build": "node build",
+    "build-portable": "node build --portable"
   },
   "repository": {
     "type": "git",
